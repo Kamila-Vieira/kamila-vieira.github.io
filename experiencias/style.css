@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: aquamarine;
+  background-color: #bb99d5;
   align-items: center;
 }
 header img {
