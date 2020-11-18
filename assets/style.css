@@ -11,7 +11,7 @@
   border-bottom: 3px solid #261237;
 }
 .logo-main img {
-  width: 70%;
+  width: 40%;
 }
 .nav-bar-list {
   top: 50%;
@@ -52,6 +52,9 @@
 @media (min-width: 720px) and (max-width: 1270px) {
   .nav-bar-item a {
     font-size: 17px;
+  }
+  .logo-main img {
+    width: 50%;
   }
 }
 
