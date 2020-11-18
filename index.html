@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamila Vieira</title>
     <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1>
+    <header class="header">
+        <h1 class="logo-main">
             <img src="../assets/img/Logo-main.png" alt="Logo Principal" >
         </h1>
-        <nav>
-            <ul>
-                <li><a href="./" name="inicio" >Início</a></li>
-                <li><a href="./projetos/">Projetos</a></li>
-                <li><a href="./experiencias/">Experiências</a></li>
-                <li><a href="./contato/">Contato</a></li>
+        <nav class="nav-bar">
+            <ul class="nav-bar-list">
+                <li class="nav-bar-item"><a href="./" title="Início">Início</a></li>
+                <li class="nav-bar-item"><a href="./projetos/" title="Projetos">Projetos</a></li>
+                <li class="nav-bar-item"><a href="./experiencias/" title="Experiências">Experiências</a></li>
+                <li class="nav-bar-item"><a href="./contato/" title="Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <h2>Sobre mim</h2>
         <p>Além dos estudos imersivos e autodidatas de estruturas básicas (HTML5 e CSS3), estou absorvendo bastante conteúdo de Javascript, 
@@ -31,8 +31,15 @@
         <p>Acompanhe meus projetos no meu perfil do GitHub: https://github.com/kamila-vieira </p>
     </main>  
 
-    <footer>
-    </footer> 
+    <footer class="footer">
+        <article class="footer-container">
+            <p class="footer-text">Desenvolvido com amor por Kamila Vieira 
+                <span class="footer-heart">
+                    <img src="./assets/img/footer_heart.png" alt="Coração roxo">
+                </span>
+            </p>
+        </article>
+    </footer>
     <script src="./main.js"></script>
 </body>
 </html>

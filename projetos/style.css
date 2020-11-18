@@ -1,31 +1,3 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #bb99d5;
-  align-items: center;
-}
-.logo-main img {
-  width: 70%;
-}
-.nav-bar-list {
-  top: 50%;
-  display: flex;
-  position: relative;
-}
-.nav-bar-item {
-  font-size: 13px;
-  margin-right: 10px;
-}
-.carousel {
-  background: url("../assets/img/carousel_mobile_bg.png");
-  background-size: cover;
-  min-height: 90vh;
-}
-.carousel-title {
-  padding-top: 2vh;
-}
-
 main h2 {
   text-align: center;
   margin-bottom: 5px;
@@ -34,35 +6,7 @@ main h2 {
 }
 
 @media (min-width: 720px) and (max-width: 1270px) {
-  .carousel {
-    background: url("../assets/img/carousel_responsive_bg.png") no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  .carousel-title {
-    padding-top: 5vh;
-  }
 }
 
 @media (min-width: 1170px) {
-  .header {
-    padding: 30px;
-  }
-  .logo-main img {
-    width: 50%;
-  }
-  .nav-bar-list {
-  }
-  .nav-bar-item {
-    margin-right: 15px;
-    font-size: 20px;
-  }
-  .carousel {
-    background: url("../assets/img/carousel_desktop_bg.png") no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  .carousel-title {
-    padding-top: 5vh;
-  }
 }
