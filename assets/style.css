@@ -5,7 +5,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   background-color: #bb99d5;
   align-items: center;
   border-bottom: 3px solid #261237;
@@ -61,8 +60,6 @@
   }
   .logo-main img {
     width: 50%;
-  }
-  .nav-bar-list {
   }
   .nav-bar-item {
     margin-right: 15px;
