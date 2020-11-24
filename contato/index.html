@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamila Vieira</title>
-    <link rel="stylesheet" href="../assets/reset.css">
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +21,17 @@
                 <li class="nav-bar-item"><a href="./" title="Contato" >Contato</a></li>
             </ul>
         </nav>
+        <div class="menu-responsive-container">
+            <button class="menu-responsive">&#9776;</button>
+            <nav id="nav-bar-responsive" style="display: none;">
+                <ul class="nav-bar-list">
+                    <li class="nav-bar-item"><a href="../" title="Início" >Início</a></li>
+                    <li class="nav-bar-item"><a href="../projetos/" title="Projetos" >Projetos</a></li>
+                    <li class="nav-bar-item"><a href="../experiencias/" title="Experiências" >Experiências</a></li>
+                    <li class="nav-bar-item"><a href="./" title="Contato" >Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -29,13 +40,15 @@
 
     <footer class="footer">
         <article class="footer-container">
-            <p class="footer-text">Desenvolvido com amor por Kamila Vieira 
+            <p class="footer-text">
+                Desenvolvido com 
                 <span class="footer-heart">
                     <img src="../assets/img/footer_heart.png" alt="Coração roxo">
                 </span>
+                por Kamila Vieira
             </p>
         </article>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

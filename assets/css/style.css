@@ -1,6 +1,9 @@
 @font-face {
   font-family: "Poppins";
-  src: url("./fonts/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+body {
+  font-family: "Poppins", sans-serif;
 }
 .header {
   display: flex;
@@ -14,9 +17,13 @@
   width: 40%;
 }
 .nav-bar-list {
-  top: 50%;
   display: flex;
-  position: relative;
+  flex-direction: column;
+  position: absolute;
+  background-color: black;
+  right: 0;
+  padding: 10px;
+  line-height: 30px;
 }
 .nav-bar-item {
   margin-right: 10px;
@@ -24,9 +31,29 @@
 .nav-bar-item a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
+.menu-responsive {
+  display: block;
+  left: 0;
+  text-align: right;
+  margin-left: 2rem;
+  top: 0.4rem;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: SegoeUIBold;
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: 0.3s linear;
+  outline: none;
+}
+.nav-bar {
+  display: none;
+}
+
 .footer {
   background: #7436a4;
   border-top: 3px solid #261237;
@@ -56,6 +83,20 @@
   .logo-main img {
     width: 50%;
   }
+  .menu-responsive-container {
+    display: none;
+  }
+  .nav-bar {
+    display: block;
+  }
+  .nav-bar-list {
+    flex-direction: row;
+    top: 50%;
+    position: relative;
+    background-color: inherit;
+    padding: 0;
+    line-height: 0;
+  }
 }
 
 @media (min-width: 1170px) {
@@ -71,10 +112,24 @@
   .nav-bar-item a {
     font-size: 20px;
   }
+  .menu-responsive-container {
+    display: none;
+  }
+  .nav-bar {
+    display: block;
+  }
   .footer-container {
     padding: 1rem 50px;
   }
   .footer-text {
     font-size: 13px;
+  }
+  .nav-bar-list {
+    flex-direction: row;
+    top: 50%;
+    position: relative;
+    background-color: inherit;
+    padding: 0;
+    line-height: 0;
   }
 }
