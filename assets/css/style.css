@@ -1,38 +1,78 @@
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "BadScript";
+  src: url("../fonts/Bad_Script/BadScript-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
+  font-weight: 400;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  background-color: #bb99d5;
+  padding: 15px;
+  background-color: #261237;
   align-items: center;
-  border-bottom: 3px solid #261237;
+  border-bottom: 3px solid #d6aff3;
+  /* RETIRAR QUANDO COMEÇAR A ESTILIZAR O CORPO */
+  margin-bottom: 2rem;
 }
-.logo-main img {
-  width: 40%;
+.logo-main {
+  color: #ffffff;
+  font-family: "BadScript";
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
+.logo-main p:before,
+.logo-main:before {
+  content: "";
+  margin: 8px;
+}
+.logo-main p {
+  font-family: "Raleway";
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 400;
 }
 .nav-bar-list {
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: black;
+  background-color: #26123790;
+  width: 100%;
+  padding: 50px 0;
   right: 0;
-  padding: 10px;
-  line-height: 30px;
+  left: 0;
+  line-height: 50px;
 }
 .nav-bar-item {
-  margin-right: 10px;
+  text-align: center;
+  position: relative;
 }
 .nav-bar-item a {
+  text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 .menu-responsive {
   display: block;
@@ -42,7 +82,7 @@ body {
   top: 0.4rem;
   color: #ffffff;
   font-size: 30px;
-  font-family: SegoeUIBold;
+  font-family: Poppins;
 
   cursor: pointer;
   background: none;
@@ -53,7 +93,6 @@ body {
 .nav-bar {
   display: none;
 }
-
 .footer {
   background: #7436a4;
   border-top: 3px solid #261237;
@@ -67,7 +106,7 @@ body {
 .footer-text {
   font-size: 11px;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   color: #d6aff3;
 }
 .footer-heart img {
@@ -76,41 +115,43 @@ body {
   top: 3px;
 }
 
-@media (min-width: 720px) and (max-width: 1270px) {
-  .nav-bar-item a {
-    font-size: 17px;
+@media (min-width: 720px) {
+  .header {
+    padding: 30px 0;
   }
-  .logo-main img {
-    width: 50%;
+  .logo-main {
+    font-size: 24px;
+    line-height: 24px;
   }
-  .menu-responsive-container {
-    display: none;
+  .logo-main p::before,
+  .logo-main::before {
+    content: "";
+    margin: 15px;
   }
-  .nav-bar {
-    display: block;
+  .logo-main p {
+    font-size: 12px;
+  }
+  .nav-bar-list::after {
+    content: "";
+    margin: 15px;
   }
   .nav-bar-list {
-    flex-direction: row;
-    top: 50%;
-    position: relative;
-    background-color: inherit;
-    padding: 0;
-    line-height: 0;
-  }
-}
-
-@media (min-width: 1170px) {
-  .header {
-    padding: 30px;
-  }
-  .logo-main img {
-    width: 50%;
+    align-items: center;
   }
   .nav-bar-item {
     margin-right: 15px;
   }
   .nav-bar-item a {
-    font-size: 20px;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .nav-bar-item a:hover {
+    padding: 10px 0;
+    border: 0.1px solid #00000010;
+    border-bottom: 3px solid #4d246d;
+    transition: 0.4s;
+    font-weight: bold;
+    color: #7436a4;
   }
   .menu-responsive-container {
     display: none;
