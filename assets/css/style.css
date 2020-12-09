@@ -90,6 +90,14 @@ body {
   transition: 0.5s;
   outline: none;
 }
+.nav-responsive,
+.second-bar-menu-after,
+.nav-bar {
+  display: none;
+}
+.nav-bar-menu-after {
+  display: block;
+}
 .menu-responsive-bar {
   background-color: #ffffff;
   width: 20px;
@@ -102,10 +110,6 @@ body {
   transform: rotate(-45deg);
   margin-bottom: -3px;
   width: 25px;
-}
-.second-bar-menu-after,
-.nav-bar {
-  display: none;
 }
 .third-bar-menu-after {
   z-index: 2;
