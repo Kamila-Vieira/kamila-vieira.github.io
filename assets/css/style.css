@@ -29,6 +29,9 @@ body {
   background-color: #261237;
   align-items: center;
   border-bottom: 3px solid #d6aff3;
+  position: fixed;
+  right: 0;
+  left: 0;
   /* RETIRAR QUANDO COMEÇAR A ESTILIZAR O CORPO */
   margin-bottom: 2rem;
 }
@@ -104,6 +107,7 @@ body {
   height: 3px;
   margin-bottom: 8px;
   transition: 0.5s;
+  position: relative;
 }
 .first-bar-menu-after {
   z-index: 1;
@@ -119,8 +123,6 @@ body {
 .footer {
   background: #7436a4;
   border-top: 3px solid #261237;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 .footer-container {
@@ -170,7 +172,6 @@ body {
   }
   .nav-bar-item a:hover {
     padding: 10px 0;
-    border: 0.1px solid #00000010;
     border-bottom: 3px solid #4d246d;
     transition: 0.4s;
     font-weight: bold;

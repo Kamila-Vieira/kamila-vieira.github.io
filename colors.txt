@@ -1,0 +1,24 @@
+Tons de Roxo:
+para texto (mais claro):
+#d6aff3
+#bb99d5
+#a183b6
+
+#9a48da => logo
+#873fbf
+#7436a4
+#602d88
+#4d246d => background (carroussel)
+#3a1b52
+#261237
+#13091b
+
+Tons de marrom:
+#ea601b
+#cd5418
+#af4814
+#923c11
+#75300e
+#58240a
+#3a1807
+#1d0c03
