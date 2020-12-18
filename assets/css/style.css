@@ -111,19 +111,22 @@ body {
 }
 .first-bar-menu-after {
   z-index: 1;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   margin-bottom: -3px;
   width: 35px;
 }
 .third-bar-menu-after {
   z-index: 2;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   width: 35px;
 }
 .footer {
   background: #7436a4;
   border-top: 3px solid #261237;
   width: 100%;
+  /* -------------- */
+  position: absolute;
+  bottom: 0;
 }
 .footer-container {
   padding: 1rem 20px;
