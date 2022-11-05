@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "icons";
-  src: url("../fonts/fantasticon/icons.ttf?c37923d956ff22bced04ffa02da70882") format("truetype"), url("../fonts/fantasticon/icons.woff?c37923d956ff22bced04ffa02da70882") format("woff"), url("../fonts/fantasticon/icons.woff2?c37923d956ff22bced04ffa02da70882") format("woff2");
+  src: url("../fonts/fantasticon/icons.ttf?dd35b89116a03568907c885f3c6afc34") format("truetype"), url("../fonts/fantasticon/icons.woff?dd35b89116a03568907c885f3c6afc34") format("woff"), url("../fonts/fantasticon/icons.woff2?dd35b89116a03568907c885f3c6afc34") format("woff2");
 }
 
 *[class^="fantasticon-"]:before, *[class*=" fantasticon-"]:before {
@@ -13,6 +13,8 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
 }
 
 .fantasticon-briefcase:before {
@@ -57,6 +59,54 @@
 
 .fantasticon-twitter:before {
   content: "";
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Merriweather_Sans/MerriweatherSans-ExtraBold.ttf") format("truetype");
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -195,26 +245,26 @@ table {
   border-spacing: 0;
 }
 
-#root {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
   background-color: #22212c;
   height: 100vh;
+}
+
+#root {
   padding: 40px 40px 0;
-  box-sizing: border-box;
+  display: flex;
 }
 
 .sidebar-container {
   max-width: 348px;
   width: 100%;
-}
-
-.sidebar-container__rounded {
-  border-radius: 20px;
-  background-color: #302f3d;
-  width: 100%;
-}
-
-.sidebar-container__rounded + .sidebar-container__rounded {
-  margin-top: 30px;
+  margin-right: 60px;
 }
 
 .sidebar-container__profile {
@@ -223,6 +273,7 @@ table {
   justify-content: center;
   flex-direction: column;
   padding: 32px 32px 48px;
+  min-height: 292px;
 }
 
 .sidebar-container__profile__avatar {
@@ -263,19 +314,138 @@ table {
 }
 
 .sidebar-container__network {
-  padding: 20px 20px 20px 40px;
+  padding: 30px 40px;
 }
 
-.sidebar-container__tecnologies {
-  padding: 20px 30px;
+.sidebar-container__network__navigation__list {
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar-container__experiences {
-  padding: 20px 30px;
+.sidebar-container__network__navigation__list__item {
+  color: #837e9f;
+  font-size: 0.8125rem;
+  font-weight: 400;
 }
 
-.sidebar-container__education {
-  padding: 20px 30px;
+.sidebar-container__network__navigation__list__item + .sidebar-container__network__navigation__list__item {
+  margin-top: 22px;
+}
+
+.sidebar-container__network__navigation__list__item i {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.sidebar-container__network__navigation__list__item a,
+.sidebar-container__network__navigation__list__item p {
+  font: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-container__tecnologies__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.sidebar-container__tecnologies__list__bag {
+  border-radius: 30px;
+  background-color: #cb92b1;
+  height: 24px;
+}
+
+.box-container__rounded {
+  border-radius: 20px;
+  background-color: #302f3d;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.box-container__rounded + .box-container__rounded {
+  margin-top: 30px;
+}
+
+.box-container__rounded__title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 25px;
+  color: #837e9f;
+}
+
+.active__experience__list {
+  list-style: disc;
+  padding: 0 0 0 40px;
+  margin-top: 20px;
+}
+
+.active__experience__list__item {
+  color: #837e9f;
+}
+
+.active__experience__list__item__enterprise {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.active__experience__list__item__operation {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.active__experience__list__item__activities {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.main-container {
+  flex: 1;
+}
+
+.main-container__projects__heading__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container__projects__heading__title__see-all {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.main-container__projects__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.main-container__projects__list__item {
+  margin-top: 0 !important;
+}
+
+.footer-container {
+  padding: 19px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container__text {
+  font-size: 0.875rem;
+  color: #837e9f;
 }
 
 /*# sourceMappingURL=style.css.map */

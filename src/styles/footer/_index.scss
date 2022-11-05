@@ -1,0 +1,10 @@
+.footer-container {
+  padding: 19px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__text {
+    font-size: calculate-rem(14);
+    color: $text-color;
+  }
+}

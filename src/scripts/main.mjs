@@ -1,3 +1,5 @@
-import { teste } from "./teste/index.mjs";
-console.log(teste);
-//https://api.github.com/repos/Kamila-Vieira/
+import { User } from "./components/user/index.mjs";
+import { Repositories } from "./components/repositories/index.mjs";
+
+User.init();
+Repositories.init();

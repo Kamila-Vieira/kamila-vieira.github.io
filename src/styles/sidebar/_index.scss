@@ -1,19 +1,13 @@
 .sidebar-container {
   max-width: 348px;
   width: 100%;
-  &__rounded {
-    border-radius: 20px;
-    background-color: $secondary;
-    width: 100%;
+  margin-right: 60px;
 
-    & + .sidebar-container__rounded {
-      margin-top: 30px;
-    }
-  }
   &__profile {
     @include centralize-content;
     flex-direction: column;
     padding: 32px 32px 48px;
+    min-height: 292px;
 
     &__avatar {
       width: 128px;
@@ -44,16 +38,100 @@
       }
     }
   }
+
   &__network {
-    padding: 20px 20px 20px 40px;
+    padding: 30px 40px;
+
+    &__navigation {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        &__item {
+          & + .sidebar-container__network__navigation__list__item {
+            margin-top: 22px;
+          }
+          color: $text-color;
+          font-size: calculate-rem(13);
+          font-weight: 400;
+
+          i {
+            font-size: calculate-rem(24);
+            margin-right: 20px;
+          }
+
+          a,
+          p {
+            font: inherit;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
+
   &__tecnologies {
-    padding: 20px 30px;
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+      margin-top: 20px;
+      padding: 0 10px;
+
+      &__bag {
+        border-radius: 30px;
+        background-color: $rose;
+        height: 24px;
+      }
+    }
   }
-  &__experiences {
-    padding: 20px 30px;
+}
+
+.box-container {
+  &__rounded {
+    border-radius: 20px;
+    background-color: $secondary;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 30px 20px;
+
+    & + .box-container__rounded {
+      margin-top: 30px;
+    }
+
+    &__title {
+      @include common-title(20, 25px);
+    }
   }
-  &__education {
-    padding: 20px 30px;
+}
+
+.active__experience {
+  &__list {
+    list-style: disc;
+    padding: 0 0 0 40px;
+    margin-top: 20px;
+
+    &__item {
+      color: $text-color;
+
+      &__enterprise {
+        display: block;
+        font-size: calculate-rem(14);
+        font-weight: 700;
+        line-height: 18px;
+      }
+      &__operation {
+        display: block;
+        font-size: calculate-rem(12);
+        font-weight: 300;
+        line-height: 15px;
+      }
+      &__activities {
+        display: block;
+        font-size: calculate-rem(12);
+        font-weight: 400;
+        line-height: 15px;
+      }
+    }
   }
 }

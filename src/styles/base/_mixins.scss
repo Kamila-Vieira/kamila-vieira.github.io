@@ -38,11 +38,11 @@
   @return $value-in-rem + rem;
 }
 
-@mixin common-title {
+@mixin common-title($font-zize: 23, $line-height: 29px) {
   font-family: $main-font;
   font-style: normal;
   font-weight: 700;
-  font-size: calculate-rem(23);
-  line-height: 29px;
+  font-size: calculate-rem($font-zize);
+  line-height: $line-height;
   color: $text-color;
 }
