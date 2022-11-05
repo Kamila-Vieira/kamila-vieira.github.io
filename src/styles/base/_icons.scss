@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/fantasticon/icons.ttf?c37923d956ff22bced04ffa02da70882") format("truetype"),
+url("../fonts/fantasticon/icons.woff?c37923d956ff22bced04ffa02da70882") format("woff"),
+url("../fonts/fantasticon/icons.woff2?c37923d956ff22bced04ffa02da70882") format("woff2");
+}
+
+*[class^="fantasticon-"]:before, *[class*=" fantasticon-"]:before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//variáveis
+$briefcase: "\f101";
+$folder: "\f102";
+$git-branch: "\f103";
+$github: "\f104";
+$globe: "\f105";
+$instagram: "\f106";
+$linkedin: "\f107";
+$mail: "\f108";
+$map-pin: "\f109";
+$star: "\f10a";
+$twitter: "\f10b";
+
+
+.fantasticon-briefcase:before {
+    content: $briefcase;
+}
+.fantasticon-folder:before {
+    content: $folder;
+}
+.fantasticon-git-branch:before {
+    content: $git-branch;
+}
+.fantasticon-github:before {
+    content: $github;
+}
+.fantasticon-globe:before {
+    content: $globe;
+}
+.fantasticon-instagram:before {
+    content: $instagram;
+}
+.fantasticon-linkedin:before {
+    content: $linkedin;
+}
+.fantasticon-mail:before {
+    content: $mail;
+}
+.fantasticon-map-pin:before {
+    content: $map-pin;
+}
+.fantasticon-star:before {
+    content: $star;
+}
+.fantasticon-twitter:before {
+    content: $twitter;
+}

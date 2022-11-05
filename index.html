@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamila Vieira | Desenvolvedora Front-end</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header class="header">
-        <h1 class="logo-main">
-            Kamila Vieira
-            <p>Desenvolvedora Front-end</p>
-        </h1>
-        <nav class="nav-bar">
-            <ul class="nav-bar-list">
-                <li class="nav-bar-item"><a href="" title="Início">Início</a></li>
-                <li class="nav-bar-item"><a href="projetos" title="Projetos">Projetos</a></li>
-                <li class="nav-bar-item"><a href="#experiences" title="Experiências">Experiências</a></li>
-                <li class="nav-bar-item"><a href="#contact" title="Contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="menu-responsive-container">
-            <button class="menu-responsive">
-                <div class="first-bar-menu menu-responsive-bar"></div>
-                <div class="second-bar-menu menu-responsive-bar"></div>
-                <div class="third-bar-menu menu-responsive-bar"></div>
-            </button>
-            <nav class="nav-responsive">
-                <ul class="nav-bar-list">
-                    <li class="nav-bar-item"><a href="./" title="Início">Início</a></li>
-                    <li class="nav-bar-item"><a href="./projetos/" title="Projetos">Projetos</a></li>
-                    <li class="nav-bar-item"><a href="#experiences" title="Experiências">Experiências</a></li>
-                    <li class="nav-bar-item"><a href="#contact" title="Contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <h2>Em Breve!</h2>
-    <!-- <main class="main">
-        <section id="about">
-            <article class="about-container">
-                <h2 class="section-title">Sobre mim</h2>
-                <img class="avatar" src="https://avatars1.githubusercontent.com/u/60486364?s=460&u=62d7a70278f4484b041cd2c6658b4f2075b748e3&v=4" alt="Kamila Vieira">
-                <p class="about-resume">
-                    Além dos estudos imersivos e autodidatas de estruturas básicas de Front-end (HTML5 e CSS3) e Javascript, 
-                    estou absorvendo bastante conteúdo de Javascript moderno (ES6+) e os principais frameworks e bibliotecas de Javascript 
-                    (React, Angular, Vue, Nodejs), além de conceitos em SEO, PHP, MySQl, clean code e TDD.
-                    <br><br>
-                    Estou apaixonada por essa área e buscando aprendizado diário.
-                    <br><br>
-                    Gosto bastante de aprender diariamente, faço desafios de javascript diários na plataforma da 
-                    <a href="https://www.codewars.com/users/kamila_vieira">Codewars</a>, 
-                    também participo do desafio 
-                    <a href="https://www.100daysofcode.com/">#100DaysOfCode</a>
-                    e compartilho meus avanços diários no Twitter com a Hashtag.
-                    <br><br>
-                    Estou indo para o terceiro e último semestre do curso técnico de desenvolvimento de sistemas e iniciei 
-                    recentemente técnólogo em análise e desenvolvimento de sistemas.
-                    <br><br>
-                    O que sempre me move é a sede de aprendizado constante, sou extremamente focada e determinada para alcançar 
-                    os meus objetivos. Gosto de compartilhar e poder auxiliar outras pessoas.
-                    Sou mãe, mulher, preta e da periferia e reconheço minhas barreiras, e participo de comunidades de tecnologia com pessoas que como
-                    eu decidiram contrariar as estatisticas.
-                </p>
-            </article>
-        </section>
-        <section id="experiences">
-            <h2 class="section-title">Experiências</h2>
-        </section>
-        <section id="contact">
-            <h2 class="section-title">Contato</h2>
-        </section>
-    </main> -->
-    <footer class="footer">
-        <article class="footer-container">
-            <p class="footer-text">
-                Desenvolvido com 
-                <span class="footer-heart">
-                    <img src="./assets/img/footer_heart.png" alt="Coração roxo">
-                </span>
-                por Kamila Vieira
-            </p>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo template inicial</title>
+    <link
+      rel="shortcut icon"
+      href="./public/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main id="root">
+      <aside class="sidebar-container">
+        <article class="sidebar-container__profile sidebar-container__rounded">
+          <div class="sidebar-container__profile__avatar">
+            <!--  <img
+              src="https://github.com/Kamila-Vieira.png"
+              alt="Github avatar Kamila Vieira"
+            /> -->
+          </div>
+          <h1 class="sidebar-container__profile__name">
+            <!-- Kamila Vieira -->
+            João da Silva
+            <span class="sidebar-container__profile__name__area"
+              ><!-- Desenvolvedora Front-end -->Lorem ipsum</span
+            >
+          </h1>
         </article>
+        <article class="sidebar-container__network sidebar-container__rounded">
+          <nav class="sidebar-container__network__navigation">
+            <ul class="sidebar-container__network__navigation__list">
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-map-pin"></i>
+                <p>Brasil</p>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-briefcase"></i>
+                <a href="/" target="_blank">Rocketseat</a>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-github"></i>
+                <a href="/" target="_blank">birobirobiro</a>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-linkedin"></i>
+                <a href="/" target="_blank">joao-inacio-neto</a>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-twiter"></i>
+                <a href="/" target="_blank">birobirobiro</a>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-globe"></i>
+                <a href="/" target="_blank">https://birobirobiro.dev </a>
+              </li>
+              <li class="sidebar-container__network__navigation__list__item">
+                <i class="fantasticon-mail"></i>
+                <a href="/" target="_blank">birobirobiro.dev@gmail.com</a>
+              </li>
+            </ul>
+          </nav>
+        </article>
+        <article
+          class="sidebar-container__tecnologies sidebar-container__rounded"
+        ></article>
+        <article
+          class="sidebar-container__experiences sidebar-container__rounded"
+        ></article>
+        <article
+          class="sidebar-container__education sidebar-container__rounded"
+        ></article>
+      </aside>
+      <article class="main-container">
+        <section class="main-container__projects"></section>
+        <section class="main-container__posts"></section>
+      </article>
+    </main>
+    <footer>
+      <p></p>
     </footer>
-    <script src="./src/main.js"></script>
-</body>
+    <script type="module" src="./public/js/index.js"></script>
+  </body>
 </html>

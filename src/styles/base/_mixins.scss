@@ -1,0 +1,48 @@
+@mixin centralize-container($hasResponsivePadding: true, $maxWidth: $containerWidth) {
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  @if $hasResponsivePadding {
+    @include media-max($maxWidth + 1rem) {
+      padding: 0 1rem;
+    }
+  }
+}
+
+@mixin centralize-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media-max($maxWidth) {
+  @media (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin media-min($minWidth) {
+  @media (min-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin media-between($minWidth, $maxWidth) {
+  @media (min-width: $maxWidth) and (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@function calculate-rem($value-in-px) {
+  $value-in-rem: $value-in-px / 16;
+  @return $value-in-rem + rem;
+}
+
+@mixin common-title {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: calculate-rem(23);
+  line-height: 29px;
+  color: $text-color;
+}
