@@ -20,7 +20,7 @@ export const Api = {
       const response = await axios({
         method: "get",
         baseURL: GIT_API_USERS,
-        url: `/${GIT_USER}/repos`,
+        url: `/${GIT_USER}/repos?per_page=100&sort=pushed`,
       });
       return response.data;
     } catch (error) {
@@ -34,6 +34,19 @@ export const Api = {
         method: "get",
         baseURL: GIT_API_REPOS,
         url: `/${GIT_USER}/${repoName}`,
+      });
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getRepoLanguages: async (repoName) => {
+    try {
+      const response = await axios({
+        method: "get",
+        baseURL: GIT_API_REPOS,
+        url: `/${GIT_USER}/${repoName}/languages`,
       });
       return response.data;
     } catch (error) {

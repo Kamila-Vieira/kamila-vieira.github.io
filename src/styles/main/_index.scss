@@ -23,6 +23,17 @@
       &__item {
         margin-top: 0 !important;
       }
+
+      &__container {
+        max-height: 250px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__posts {
+    &__list {
+      margin: 30px 0;
     }
   }
 }

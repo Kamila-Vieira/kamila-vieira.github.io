@@ -109,6 +109,74 @@
   src: url("../fonts/Merriweather_Sans/MerriweatherSans-ExtraBold.ttf") format("truetype");
 }
 
+.skeleton-loading-light {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  border-radius: 20px;
+  background-color: #00000010;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-loading-light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: skeleton-loading 2s infinite;
+          animation: skeleton-loading 2s infinite;
+}
+
+.skeleton-loading-light::after {
+  background-image: linear-gradient(90deg, rgba(48, 47, 61, 0) 0, rgba(48, 47, 61, 0.4) 20%, rgba(48, 47, 61, 0.8) 60%, rgba(48, 47, 61, 0));
+}
+
+.skeleton-loading-dark {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  border-radius: 20px;
+  background-color: #00000010;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-loading-dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: skeleton-loading 2s infinite;
+          animation: skeleton-loading 2s infinite;
+}
+
+.skeleton-loading-dark::after {
+  background-image: linear-gradient(90deg, rgba(48, 47, 61, 0) 0, rgba(48, 47, 61, 0.4) 20%, rgba(48, 47, 61, 0.8) 60%, rgba(48, 47, 61, 0));
+}
+
+@-webkit-keyframes skeleton-loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -259,12 +327,25 @@ body {
 #root {
   padding: 40px 40px 0;
   display: flex;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
 }
 
 .sidebar-container {
   max-width: 348px;
   width: 100%;
-  margin-right: 60px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-container {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    max-width: initial;
+  }
 }
 
 .sidebar-container__profile {
@@ -344,7 +425,7 @@ body {
   align-items: center;
 }
 
-.sidebar-container__tecnologies__list {
+.sidebar-container__technologies__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
@@ -352,7 +433,7 @@ body {
   padding: 0 10px;
 }
 
-.sidebar-container__tecnologies__list__bag {
+.sidebar-container__technologies__list__bag {
   border-radius: 30px;
   background-color: #cb92b1;
   height: 24px;
@@ -434,6 +515,15 @@ body {
 
 .main-container__projects__list__item {
   margin-top: 0 !important;
+}
+
+.main-container__projects__list__container {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.main-container__posts__list {
+  margin: 30px 0;
 }
 
 .footer-container {
