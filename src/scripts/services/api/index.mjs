@@ -9,7 +9,9 @@ export const Api = {
         baseURL: GIT_API_USERS,
         url: `/${GIT_USER}`,
       });
+
       return response.data;
+      return {};
     } catch (error) {
       console.log(error);
       return null;

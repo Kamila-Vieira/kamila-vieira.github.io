@@ -144,4 +144,14 @@ body {
   padding: 40px 40px 0;
   display: flex;
   column-gap: 60px;
+
+  @include media-max(1024px) {
+    column-gap: 40px;
+    padding: 20px 16px 0;
+  }
+
+  @include media-max(900px) {
+    column-gap: 0;
+    flex-direction: column;
+  }
 }

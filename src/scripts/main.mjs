@@ -1,5 +1,5 @@
-import { User } from "./components/user/index.mjs";
-import { Repositories } from "./components/repositories/index.mjs";
+import { Technologies } from "./components/technologies/index.mjs";
+import { Projects } from "./components/projects/index.mjs";
 
-User.init();
-Repositories.init();
+Projects.init();
+Technologies.init();

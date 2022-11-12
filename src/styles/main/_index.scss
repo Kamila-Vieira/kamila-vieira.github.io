@@ -9,8 +9,14 @@
         align-items: center;
 
         &__see-all {
+          font-family: $main-font;
           font-size: calculate-rem(14);
           font-weight: 400;
+          background-color: transparent;
+          line-height: 18px;
+          color: $text-color;
+          border: none;
+          cursor: pointer;
         }
       }
     }
@@ -20,13 +26,101 @@
       grid-template-columns: 1fr 1fr;
       grid-gap: 30px;
       margin: 30px 0;
+
+      @include media-max(550px) {
+        grid-template-columns: 1fr;
+      }
       &__item {
         margin-top: 0 !important;
+
+        .project-card__link {
+          color: $text-color;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          &__name {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: calculate-rem(16);
+            line-height: 20px;
+            margin-bottom: 22px;
+
+            & > i {
+              margin-right: 16px;
+            }
+          }
+          &__description {
+            margin-bottom: 37px;
+            height: 100%;
+            min-height: 60px;
+            flex: 1;
+            & p {
+              font-weight: 400;
+              font-size: calculate-rem(14);
+              line-height: 20px;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          }
+          &__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__left {
+              display: flex;
+              align-items: center;
+              &__item {
+                font-weight: 400;
+                font-size: calculate-rem(14);
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+
+                & + .project-card__link__bottom__left__item {
+                  margin-left: 16px;
+                }
+
+                & > i {
+                  margin-right: 8px;
+                }
+              }
+            }
+            &__language {
+              font-weight: 400;
+              font-size: calculate-rem(12);
+              line-height: 18px;
+            }
+          }
+        }
+      }
+
+      &__item-empty {
+        text-align: center;
+        font-size: calculate-rem(14);
+        font-weight: 400;
+        width: 100%;
+        color: $text-color;
       }
 
       &__container {
-        max-height: 250px;
+        max-height: 275px;
         overflow: hidden;
+        transition: max-height 0.5s;
+
+        @include media-max(1200px) {
+          max-height: 295px;
+        }
+
+        &.opened {
+          max-height: (16 * 275px);
+
+          @include media-max(1200px) {
+            max-height: (16 * 295px);
+          }
+        }
       }
     }
   }
@@ -34,6 +128,18 @@
   &__posts {
     &__list {
       margin: 30px 0;
+
+      &__item-empty {
+        text-align: center;
+        font-size: calculate-rem(14);
+        font-weight: 400;
+        width: 100%;
+        color: $text-color;
+      }
     }
   }
+}
+
+.empty-list {
+  display: flex;
 }

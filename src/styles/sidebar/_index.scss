@@ -6,8 +6,9 @@
     max-width: 50%;
   }
 
-  @include media-max(768px) {
+  @include media-max(900px) {
     max-width: initial;
+    margin-bottom: 40px;
   }
 
   &__profile {
@@ -53,10 +54,17 @@
       &__list {
         display: flex;
         flex-direction: column;
+        row-gap: 22px;
+
+        @include media-max(900px) {
+          column-gap: 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        @include media-max(500px) {
+          grid-template-columns: 1fr;
+        }
         &__item {
-          & + .sidebar-container__network__navigation__list__item {
-            margin-top: 22px;
-          }
           color: $text-color;
           font-size: calculate-rem(13);
           font-weight: 400;
@@ -85,10 +93,48 @@
       margin-top: 20px;
       padding: 0 10px;
 
+      @include media-max(500px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
       &__bag {
         border-radius: 30px;
-        background-color: $rose;
+        background-color: rgba($rose, 0.7);
+        padding: 0 10px;
         height: 24px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__text {
+          z-index: 1;
+          position: relative;
+          color: $black;
+          font-size: calculate-rem(10);
+          text-transform: uppercase;
+          font-weight: 700;
+          line-height: 13px;
+          white-space: nowrap;
+          max-width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        &::after {
+          content: "";
+          background-color: $rose;
+          display: block;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 0;
+          width: 100%;
+          transition: width 0.5s;
+        }
       }
     }
   }
@@ -121,6 +167,10 @@
     &__item {
       color: $text-color;
 
+      & + .active__experience__list__item {
+        margin-top: 18px;
+      }
+
       &__enterprise {
         display: block;
         font-size: calculate-rem(14);
@@ -138,6 +188,16 @@
         font-size: calculate-rem(12);
         font-weight: 400;
         line-height: 15px;
+      }
+    }
+  }
+}
+
+.technology-xp {
+  @for $xp from 1 through 5 {
+    &__#{$xp} {
+      &::after {
+        width: (($xp * 100%) / 5); /* Percentagem de experiência */
       }
     }
   }
