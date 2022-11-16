@@ -62,7 +62,7 @@ export const Projects = {
             <span class="project-card__link__bottom__left__item"><i class="fantasticon-star"></i>${
               projectData?.stargazers_count || 0
             }</span>
-            <span class="project-card__link__bottom__left__item"><i class="fantasticon-map-pin"></i>${
+            <span class="project-card__link__bottom__left__item"><i class="fantasticon-git-branch"></i>${
               projectData?.forks_count || 0
             }</span>
           </div>
