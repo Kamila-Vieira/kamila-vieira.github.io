@@ -177,11 +177,15 @@
         font-weight: 700;
         line-height: 18px;
       }
-      &__operation {
+      &__operation,
+      &__position {
         display: block;
         font-size: calculate-rem(12);
         font-weight: 300;
         line-height: 15px;
+      }
+      &__position {
+        font-weight: bold;
       }
       &__activities {
         display: block;

@@ -7,6 +7,8 @@ export const Technologies = {
     }, LOADING_TIMEOUT);
   },
   technologiesXP: {
+    Kotlin: 4,
+    Flutter: 4,
     Javascript: 5,
     Typescript: 5,
     React: 5,

@@ -106,9 +106,24 @@
       }
 
       &__container {
+        position: relative;
         max-height: 275px;
         overflow: hidden;
         transition: max-height 0.5s;
+
+        &:not(.opened) {
+          &::after {
+            content: "";
+
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            background-color: $primary;
+            height: 25%;
+            filter: blur(24px);
+          }
+        }
 
         @include media-max(1200px) {
           max-height: 295px;
@@ -126,8 +141,14 @@
   }
 
   &__posts {
+    padding-top: 20px;
+
     &__list {
       margin: 30px 0;
+
+      &.skeleton-loading-dark > * {
+        display: none;
+      }
 
       &__item-empty {
         text-align: center;
