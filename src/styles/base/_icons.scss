@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("../fonts/fantasticon/icons.ttf?dd35b89116a03568907c885f3c6afc34") format("truetype"),
-url("../fonts/fantasticon/icons.woff?dd35b89116a03568907c885f3c6afc34") format("woff"),
-url("../fonts/fantasticon/icons.woff2?dd35b89116a03568907c885f3c6afc34") format("woff2");
+    src: url("../fonts/fantasticon/icons.ttf?e70e88b2b9b5563f0a00f19a06ec5d6a") format("truetype"),
+url("../fonts/fantasticon/icons.woff?e70e88b2b9b5563f0a00f19a06ec5d6a") format("woff"),
+url("../fonts/fantasticon/icons.woff2?e70e88b2b9b5563f0a00f19a06ec5d6a") format("woff2");
 }
 
 *[class^="fantasticon-"]:before, *[class*=" fantasticon-"]:before {
@@ -29,7 +29,7 @@ $linkedin: "\f107";
 $mail: "\f108";
 $map-pin: "\f109";
 $star: "\f10a";
-$twitter: "\f10b";
+$x: "\f10b";
 
 
 .fantasticon-briefcase:before {
@@ -62,6 +62,6 @@ $twitter: "\f10b";
 .fantasticon-star:before {
     content: $star;
 }
-.fantasticon-twitter:before {
-    content: $twitter;
+.fantasticon-x:before {
+    content: $x;
 }
